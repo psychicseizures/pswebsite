@@ -1,0 +1,74 @@
+/* src/components/Modal.css */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Adjust width to be larger */
+  max-width: 900px; /* Maximum width for larger screens */
+  height: 80%; /* Adjust height to be larger */
+  max-height: 80vh; /* Maximum height relative to the viewport height */
+  background-color: #fff;
+  padding: 20px;
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  position: relative; /* Required for close button positioning */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay background */
+  z-index: 1000;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+/* Close button styling */
+.close-button {
+  position: sticky;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between the image and text */
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.close-button img {
+  width: 40px; /* Adjust size of the close icon */
+  height: 40px;
+  filter: invert(1); /* Make the icon white */
+}
+
+.close-button:hover {
+  background-color: #ffcc00;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .modal {
+    width: 90%; /* Full width on smaller screens */
+    height: 90%; /* Full height on smaller screens */
+  }
+
+  .close-button {
+    bottom: 10px;
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

@@ -1,0 +1,33 @@
+/* src/components/Music.css */
+
+.music-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between music items */
+  padding: 20px;
+}
+
+.bandcamp-embed-container {
+  text-align: center;
+}
+
+.bandcamp-embed-container h2 {
+  margin-bottom: 10px; /* Space between the title and the embed */
+  text-align: center; /* Center the title */
+}
+
+.bandcamp-embed-container iframe {
+  max-width: 100%;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .music-container {
+    gap: 20px; /* Smaller gap between embeds on small screens */
+    padding: 10px;
+  }
+
+  .bandcamp-embed-container iframe {
+    max-width: 100%;
+  }
+}
