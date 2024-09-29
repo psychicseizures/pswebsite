@@ -27,7 +27,7 @@ app.post('/api/contact', (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: process.env.EMAIL_USER, // Your email where you want to receive messages
+    to: process.env.EMAIL_RECIPIENT, // Your email where you want to receive messages
     subject: `Message from ${name}`,
     text: `
       You have received a new message from your website contact form.
