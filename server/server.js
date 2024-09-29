@@ -13,14 +13,16 @@ app.use(express.json());
 // Nodemailer configuration using environment variables
 const transporter = nodemailer.createTransport({
   service: 'gmail',
+  port: 587,
+  secure: false, // use SSL
   auth: {
-    user: process.env.EMAIL_USER, // Email from .env file
-    pass: process.env.EMAIL_PASS  // Password from .env file
-  }
+    user: process.env.EMAIL_RECIPIENT,
+    pass: process.env.EMAIL_APP_KEY,
+  },
 });
 
 // POST route for sending emails
-app.post('/send', (req, res) => {
+app.post('/api/contact', (req, res) => {
   const { name, email, message } = req.body;
 
   const mailOptions = {
