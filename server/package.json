@@ -1,4 +1,7 @@
 {
+  "private": false,
+"homepage": "https://psychicseizures.github.io/pswebsite/",
+  
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
