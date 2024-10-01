@@ -1,44 +1,49 @@
 /* src/components/LandingPage.css */
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents scrolling on the landing page */
+  height: 100%; /* Ensure body and HTML elements take up the full height */
+}
+
 .landing-page {
-    position: relative;
-    height: 100vh; /* Full viewport height */
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    object-fit: cover; /* Ensures the video covers the container without distortion */
-  }
-  
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  overflow: hidden; /* Prevents content from overflowing the landing page */
+}
+
+.background-gif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the GIF covers the entire container */
+  z-index: -1; /* Places the GIF behind the content */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Places the content above the GIF */
+  color: white; /* Adjust based on your GIF */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensures the content is centered and takes the full height of the viewport */
+  padding: 20px;
+
+  /* Optional: Add background overlay for better text readability */
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
   .content {
-    position: relative;
-    z-index: 1;
-    color: white; /* Adjust based on your video */
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    
-    /* Optional: Add background overlay for better text readability */
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
   }
-  
-  @media (max-width: 768px) {
-    .content {
-      padding: 10px;
-      font-size: 16px;
-    }
-  }
-  
+}
