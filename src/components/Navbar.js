@@ -15,9 +15,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <a href="/" onClick={() => window.location.reload()}>
+        
           <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" />
-        </a>
+        
       </div>
       <div className="hamburger" onClick={() => setIsNavOpen(!isNavOpen)}>
         ☰
