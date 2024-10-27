@@ -19,7 +19,7 @@ const MusicModal = ({ isOpen, onRequestClose }) => {
       <h2>Music</h2>
       <Music /> {/* Render the Music component inside the modal */}
       <button className="close-button" onClick={onRequestClose}>
-        <img src="/close-icon.png" alt="Close" className="close-icon" /> Close
+      <img src={`${process.env.PUBLIC_URL}/close-icon.png`} alt="Close" className="close-icon" /> Close
       </button>
       </div>
     </Modal>

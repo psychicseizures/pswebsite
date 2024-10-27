@@ -18,7 +18,7 @@ const ContactModal = ({ isOpen, onRequestClose }) => {
         <h2>Contact</h2>
         <ContactForm /> {/* Add the contact form here */}
         <button className="close-button" onClick={onRequestClose}>
-        <img src="/close-icon.png" alt="Close" className="close-icon" /> Close
+        <img src={`${process.env.PUBLIC_URL}/close-icon.png`} alt="Close" className="close-icon" /> Close
       </button>
       </div>
     </Modal>

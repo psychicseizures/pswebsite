@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo">
         <a href="/" onClick={() => window.location.reload()}>
-          <img src="/logo.png" alt="Logo" />
+          <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" />
         </a>
       </div>
       <div className="hamburger" onClick={() => setIsNavOpen(!isNavOpen)}>
@@ -25,25 +25,25 @@ const Navbar = () => {
       <ul className={`nav-links ${isNavOpen ? 'open' : ''}`}>
         <li>
           <button onClick={() => setMusicOpen(true)}>
-            <img src="/music-icon.png" alt="Music Icon" className="nav-icon" />
+            <img src={`${process.env.PUBLIC_URL}/music-icon.png`} alt="Music Icon" className="nav-icon" />
             <span>Music</span>
           </button>
         </li>
         <li>
           <button onClick={() => setVideoOpen(true)}>
-            <img src="/video-icon.png" alt="Video Icon" className="nav-icon" />
+            <img src={`${process.env.PUBLIC_URL}/video-icon.png`} alt="Video Icon" className="nav-icon" />
             <span>Video</span>
           </button>
         </li>
         <li>
           <button onClick={() => setArtworkOpen(true)}>
-            <img src="/artwork-icon.png" alt="Artwork Icon" className="nav-icon" />
+            <img src={`${process.env.PUBLIC_URL}/artwork-icon.png`} alt="Artwork Icon" className="nav-icon" />
             <span>Artwork</span>
           </button>
         </li>
         <li>
           <button onClick={() => setContactOpen(true)}>
-            <img src="/contact-icon.png" alt="Contact Icon" className="nav-icon" />
+            <img src={`${process.env.PUBLIC_URL}/contact-icon.png`} alt="Contact Icon" className="nav-icon" />
             <span>Contact</span>
           </button>
         </li>

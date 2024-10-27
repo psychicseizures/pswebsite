@@ -20,7 +20,7 @@ const VideoModal = ({ isOpen, onRequestClose }) => {
         <Video />
       </div>
       <button className="close-button" onClick={onRequestClose}>
-        <img src="/close-icon.png" alt="Close" className="close-icon" /> Close
+      <img src={`${process.env.PUBLIC_URL}/close-icon.png`} alt="Close" className="close-icon" /> Close
       </button>
     </Modal>
   );

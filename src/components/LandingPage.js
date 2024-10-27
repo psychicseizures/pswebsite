@@ -4,10 +4,12 @@ import './LandingPage.css';
 const LandingPage = () => {
   return (
     <div className="landing-page">
-      <img 
-        src="/videos/background.gif" 
-        alt="Background" 
-        className="background-gif"
+      <video
+        className="background-video"
+        src={`${process.env.PUBLIC_URL}/videos/mmmppfourbackground.mp4`}
+        autoPlay
+        loop
+        muted
       />
       <div className="content">
         {/* Your content goes here */}

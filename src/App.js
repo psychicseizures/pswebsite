@@ -11,7 +11,8 @@ import './App.css';
 
 const App = () => {
   return (
-    <Router>
+    // Set basename to "/pswebsite" to ensure proper routing
+    <Router basename="/pswebsite">
       <div>
         <Navbar />
         <Routes>
@@ -28,4 +29,3 @@ const App = () => {
 };
 
 export default App;
-

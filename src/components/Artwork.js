@@ -2,15 +2,14 @@
 import React, { useState } from 'react';
 import './Artwork.css';
 
-// Define the array of artwork images here
+// Define the array of artwork images with paths relative to the public folder
 const artworkImages = [
-  { src: '/images/artwork1.webp', alt: 'Artwork 1' },
-  { src: '/images/artwork2.webp', alt: 'Artwork 2' },
-  { src: '/images/artwork3.webp', alt: 'Artwork 3' },
-  { src: '/images/artwork4.webp', alt: 'Artwork 4' },
-  { src: '/images/artwork5.webp', alt: 'Artwork 5' },
-  { src: '/images/artwork6.webp', alt: 'Artwork 6' },
-  
+  { src: `${process.env.PUBLIC_URL}/images/artwork1.webp`, alt: 'Artwork 1' },
+  { src: `${process.env.PUBLIC_URL}/images/artwork2.webp`, alt: 'Artwork 2' },
+  { src: `${process.env.PUBLIC_URL}/images/artwork3.webp`, alt: 'Artwork 3' },
+  { src: `${process.env.PUBLIC_URL}/images/artwork4.webp`, alt: 'Artwork 4' },
+  { src: `${process.env.PUBLIC_URL}/images/artwork5.webp`, alt: 'Artwork 5' },
+  { src: `${process.env.PUBLIC_URL}/images/artwork6.webp`, alt: 'Artwork 6' },
   // Add more images as needed
 ];
 
@@ -27,7 +26,6 @@ const Artwork = () => {
 
   return (
     <div className="artwork-container">
-      
       <div className="artwork-gallery">
         {artworkImages.map((image, index) => (
           <img
