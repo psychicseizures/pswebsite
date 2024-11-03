@@ -12,19 +12,20 @@ import './App.css';
 const App = () => {
   return (
     // Set basename to "/pswebsite" to ensure proper routing
-    <Router basename="/pswebsite">
-      <div>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/music" element={<Music />} />
-          <Route path="/video" element={<Video />} />
-          <Route path="/artwork" element={<Artwork />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <Router>
+  <div>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/music" element={<Music />} />
+      <Route path="/video" element={<Video />} />
+      <Route path="/artwork" element={<Artwork />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+    <Footer />
+  </div>
+</Router>
+
   );
 };
 
