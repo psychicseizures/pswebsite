@@ -21,7 +21,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/contact`, {
+    const response = await fetch('/api/contact', { // Updated to direct API call
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -29,19 +29,18 @@ const ContactForm = () => {
       body: JSON.stringify(formData),
     });
     
-  
     const result = await response.json();
+    
     if (response.ok) {
       setSubmitted(true);
     } else {
-      alert(result.message);
+      console.error('Error:', result); // Log the error
+      alert('There was a problem sending your message. Please try again.'); // User-friendly message
     }
   };
   
-
   return (
     <div className="contact-form-container">
-      
       {submitted ? (
         <p>Thank you for your message! We will get back to you soon.</p>
       ) : (
