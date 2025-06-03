@@ -6,7 +6,7 @@ const LandingPage = () => {
     <div className="landing-page">
       <video
         className="background-video"
-        src={`${process.env.PUBLIC_URL}/videos/mmmppfourbackground.mp4`}
+        src={`${process.env.PUBLIC_URL}/videos/background1.mp4`}
         autoPlay
         loop
         muted

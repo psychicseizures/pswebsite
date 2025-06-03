@@ -6,6 +6,21 @@ const Music = () => {
   return (
     <div className="music-container">
      
+ 
+
+ <div className="bandcamp-embed-container">
+     <h2>DOOM</h2>
+      <iframe 
+     style={{ border: "0", width: "350px", height: "720px" }}
+      src="https://bandcamp.com/EmbeddedPlayer/album=1260994881/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" 
+      seamless
+      title="viralcontrol"
+      allow="autoplay">
+      <a href="https://psychicseizures.bandcamp.com/album/doom" 
+      >DOOM</a>
+      </iframe>
+      </div>
+
      <div className="bandcamp-embed-container">
      <h2>Viral Control</h2>
       <iframe 
