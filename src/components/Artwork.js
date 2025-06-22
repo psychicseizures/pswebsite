@@ -4,6 +4,7 @@ import './Artwork.css';
 
 // Define the array of artwork images with titles, paths, and alt text
 const artworkImages = [
+  { src: `${process.env.PUBLIC_URL}/images/artwork0.webp`, alt: 'Artwork 0', title: 'Kunsthochschul-Professor' },
   { src: `${process.env.PUBLIC_URL}/images/artwork1.webp`, alt: 'Artwork 1', title: 'Das Podest' },
   { src: `${process.env.PUBLIC_URL}/images/artwork2.webp`, alt: 'Artwork 2', title: 'Pandemonium' },
   { src: `${process.env.PUBLIC_URL}/images/artwork3.webp`, alt: 'Artwork 3', title: 'Soldier Boy' },
